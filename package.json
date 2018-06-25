@@ -39,7 +39,8 @@
     "deploy": "npm run css-deploy && npm run js-build && npm run pug-build",
     "js-build": "babel _javascript --out-dir lib",
     "js-watch": "npm run js-build -- --watch",
-    "start": "npm run css-watch | npm run js-watch | npm run pug-watch | http-server"
-  },
+    "start": "npm run css-watch | npm run js-watch | npm run pug-watch | http-server",
+ 		"dist": "npm run deploy && rm -rf dist && mkdir -p dist && cp index.html dist && cp -r css dist && cp -r lib dist && cp -r images dist"
+ 	},
   "version": "0.0.2"
 }
