@@ -14,6 +14,7 @@
     "babel-preset-es2015-ie": "^6.7.0",
     "bulma": "^0.7.1",
     "bulma-extensions": "^2.2.1",
+    "css-eliminator": "^1.0.1",
     "node-sass": "^4.9.0",
     "postcss-cli": "^4.1.1",
     "pug": "^2.0.3",
@@ -28,12 +29,13 @@
   "license": "MIT",
   "name": "master",
   "scripts": {
+    "pug-build": "./node_modules/pug-cli/index.js index.pug",
     "pug-watch": "./node_modules/pug-cli/index.js --watch index.pug",
     "css-build": "node-sass _sass/main.scss css/main.css",
     "css-deploy": "npm run css-build && npm run css-postcss",
     "css-postcss": "postcss --use autoprefixer --output css/main.css css/main.css",
     "css-watch": "npm run css-build -- --watch",
-    "deploy": "npm run css-deploy && npm run js-build",
+    "deploy": "npm run css-deploy && npm run js-build && npm run pug-build",
     "js-build": "babel _javascript --out-dir lib",
     "js-watch": "npm run js-build -- --watch",
     "start": "npm run css-watch | npm run js-watch | npm run pug-watch | http-server"
