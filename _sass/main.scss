@@ -27,6 +27,8 @@ $primary-invert: $pink-invert;
 */
 
 @import "../node_modules/bulma/bulma";
+@import "../node_modules/bulma-extensions/bulma-divider/dist/css/bulma-divider.sass";
 
-html { background-color: $white-ter;}
-
+html { background-color: $white-ter; }
+section#bigdata { background-color: hsl(271, 100%, 90%); }
+section#methods { background-color: hsl(141, 71%, 60%); }

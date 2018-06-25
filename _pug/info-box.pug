@@ -1,0 +1,14 @@
+mixin info-box(icon, title, info, ...items)
+	div(class="tile is-child box")
+		.media
+			.media-left
+				span(class="icon")
+					i(class=icon)
+			.media-content
+				div(class="title is-5")= title
+		.content
+			div(class="is-divider" data-content="o")
+			p= info
+			ul
+				each item in items
+					li= item

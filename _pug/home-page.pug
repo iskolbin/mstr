@@ -1,0 +1,21 @@
+include index-card.pug
+
+mixin home-page()
+	section(class="hero is-info is-fullheight" id="main")
+		.hero-head
+			.container
+				div(class="column is-8-desktop is-offset-2-desktop has-text-centered")
+					h1(class="title is-4 is-2-desktop") Магистерские программы
+					h2(class="subtitle is-6") «Информационные технологии в моделировании и управлении», 810 Б
+		.hero-body
+			.container
+				.columns
+					+index-card("#bigdata", "images/bigdata.jpg", "Машинное обучение и управление большими данными")
+					+index-card("#methods", "images/methods.jpg", "Методы, средства и технологии разработки программно-информационных систем")
+		.hero-foot
+			.container
+				div(class="column is-8-desktop is-offset-2-desktop has-text-centered")
+					p
+						i Базовая кафедры МАИ (национальный исследовательский университет)
+					p
+						i Федерального исследовательского центра «Информатика и управление» РАН

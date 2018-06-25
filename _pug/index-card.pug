@@ -1,0 +1,13 @@
+mixin index-card(href, imgsrc, title)
+	.column
+		a(href=href)
+			.card
+				.card-image
+					figure(class="image is-4by1")
+						img(src=imgsrc)
+				.card-header
+					.card-title
+						.card-header-title= title
+				.card-footer
+					.card-footer-item
+						i Магистерская программа
