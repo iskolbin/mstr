@@ -1,12 +1,25 @@
 include index-card.pug
 
+mixin home-header()
+	nav(class="level")
+		div(class="level-item has-text-centered")
+			a(href="https://mai.ru")
+				img(src="images/mai.png")
+		div(class="level-item")
+			div
+				p(class="title has-text-centered") Магистерские программы
+				hr
+				p(class="heading") Информационные технологии и прикладная математика, 810Б
+		div(class="level-item has-text-centered")
+			a(href="https://mai.ru/education/fpmf/810/")
+				img(src="images/f8.png")
+
 mixin home-page()
-	section(class="hero is-info is-fullheight" id="main")
+	section(class="hero is-info is-large is-bold" id="home-page")
 		.hero-head
 			.container
-				div(class="column is-8-desktop is-offset-2-desktop has-text-centered")
-					h1(class="title is-4 is-2-desktop") Магистерские программы
-					h2(class="subtitle is-6") «Информационные технологии в моделировании и управлении», 810 Б
+				+home-header()
+
 		.hero-body
 			.container
 				.columns
@@ -16,6 +29,6 @@ mixin home-page()
 			.container
 				div(class="column is-8-desktop is-offset-2-desktop has-text-centered")
 					p
-						i Базовая кафедры МАИ (национальный исследовательский университет)
+						i Базовая кафедра Московского авиационного института (национальный исследовательский университет)
 					p
 						i Федерального исследовательского центра «Информатика и управление» РАН

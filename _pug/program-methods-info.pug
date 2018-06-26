@@ -2,14 +2,14 @@ include info-box.pug
 include info-col.pug
 include btn-020302.pug
 
-mixin bigdata-info1()
+mixin info1()
 	+info-box("fas fa-box", "Чему обучают по данной программе?", "",
 		"Проектирование и разработка распределённых систем и баз данных",
 		"Программирование на платформе Java",
 		"Анализ данных с помощью средств Apache Hadoop и Apache Spark",
 		"Умению применять алгоритмы машинного обучения для создания моделей и реализации моделей на больших объёмах данных")
 
-mixin bigdata-info2()
+mixin info2()
 	+info-box("fas fa-box-open", "В чем заключается особенность данной программы?", "",
 		"Профессиональная экспертиза учебных программ от лидеров IT-отрасли",
 		"Наставничество от практикующих специалистов компаний-партнеров на протяжении всего образовательного трека",
@@ -24,7 +24,7 @@ mixin bigdata-info2()
 		"Отсрочка от армии",
 		"Комфортное общежитие в шаговой доступности от учебных корпусов")
 
-mixin bigdata-info3()
+mixin info3()
 	+info-box("fas fa-clipboard-list", "Какие дисциплины входят в план обучения?", "",
 		"Реляционные базы данных и хранилища данных",
 		"Основы Java и Scala для анализа данных",
@@ -41,7 +41,7 @@ mixin bigdata-info3()
 		"Спецкурс HeadHunter",
 		"Спецкурс LUXOFT")
 
-mixin bigdata-info4()
+mixin info4()
 	+info-box("fas fa-cogs", "Каким профессиональным навыкам и знаниям обучают по данной программе?",
 		"Умение применять алгоритмы машинного обучения для создания моделей и реализации моделей на больших объемах данных. Кем работают выпускники:",
 		"Разработчик Big Data (Java, Python)",
@@ -50,11 +50,11 @@ mixin bigdata-info4()
 		"Аналитик данных / Data Scientist",
 		"Специалист по машинному обучению")
 
-mixin bigdata-info5()
+mixin info5()
 	+info-box("fas fa-desktop", "Материально-техническая база. На чем учат магистрантов?",
 		"Магистранты обучаются на базе кафедры №810Б «Информационные технологии в моделировании и управлении», помещениий РАН (ФИЦ ИУ РАН) и IT-центра МАИ")
 								
-mixin bigdata-info6()
+mixin info6()
 	+info-box("fas fa-briefcase", "Где работают выпускники?", "",
 		"IT-компании, которые разрабатывают продукты для заказчиков",
 		"Компании, чей бизнес связан с применением IT-систем: крупные банки и страховые компании",
@@ -62,22 +62,22 @@ mixin bigdata-info6()
 		"Крупные интернет-магазины и онлайн-сервисы",
 		"Крупные компании IT-индустрии (Яндекс, Google, Mail.ru Group и т.п.)")
 
-mixin bigata-info-panel1-data()
+mixin info-panel1-data()
 	+info-col("Форма обучения", "Очная")
 	+info-col("Срок обучения", "2 года")
 	+info-col("Бюджетных/платных мест", "10/6")
 	+info-col("Стоимость обучения", "196528 P")
 
-mixin bigdata-info-panel1()
+mixin info-panel1()
 	nav(class="level")
-		+bigata-info-panel1-data()
+		+info-panel1-data()
 
-mixin bigdata-info-panel2-data()
+mixin info-panel2-data()
 	+info-col-small("Факультет", "«Информационные технологии и прикладная математика»")
 	+info-col-small("Руководитель программы", "Абгарян Каринэ Карленовна")
-	+btn-020302("is-white")
+	+btn-020302("is-black", "has-background-black")
 
-mixin bigdata-info-panel2()
+mixin info-panel2()
 	.container
 		.columns
-			+bigdata-info-panel2-data()
+			+info-panel2-data()

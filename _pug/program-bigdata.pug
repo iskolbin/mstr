@@ -1,24 +1,56 @@
 include program-bigdata-info.pug
 
+mixin partner(icon)
+	.column
+		figure(class="image is-128x128")
+			img(src="images/" + icon)
+
 mixin program-bigdata()
-	section(class="hero section-padding-medium" id="bigdata")
+	section(class="hero" id="bigdata")
 		.hero-body
 			.container
 				.columns
 					div(class="column is-8-desktop is-offset-2-desktop")
 						h1(class="title is-spaced") Машинное обучение и управление большими данными
+						p(class="heading") 02.04.02 Фундаментальная информатика и информационные технологии
 						h2(class="subtitle") Магистерская программа
+						a(class="button is-black is-large is-outlined" href="https://docs.google.com/forms/d/e/1FAIpQLSdTmOdY55jU95OSJxyNbM5irGZJFXhZ0tKaOrQ1aeAtj0IWPA/viewform")
+							span(class="icon")
+								i(class="fas fa-graduation-cap")
+							span Поступить
 
+	section(class="hero is-primary")
+		.hero-body
+			.container
+				+bigdata-info-panel1()
+				+bigdata-info-panel2()
+
+	section(class="hero")
+		.hero-body
 			.container
 				div(class="tile is-ancestor")
 					div(class="tile is-4 is-vertical is-parent")
-						+info1()
-						+info2()
+						+bigdata-info1()
+						+bigdata-info2()
 
 					div(class="tile is-4 is-vertical is-parent")
-						+info3()
-						+info4()
+						+bigdata-info3()
+						+bigdata-info4()
 
 					div(class="tile is-4 is-vertical is-parent")
-						+info5()
-						+info6()
+						+bigdata-info5()
+						+bigdata-info6()
+
+	section(class="hero")
+		.hero-body
+			.container
+				.heading Партнеры программы
+
+			.container
+				.columns
+					+partner("hh.png")
+					+partner("luxoft.png")
+					+partner("sberbank.png")
+					+partner("sbertech.png")
+					+partner("croc.png")
+					+partner("mts.png")
